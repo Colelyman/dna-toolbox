@@ -364,4 +364,6 @@ with open( sys.argv[ 1 ] ) as fh:
     seq = seq + "$"
 
 BWT = makeBWT( seq )
-print BWT
+#print BWT
+for i in BWT:
+    print i,
