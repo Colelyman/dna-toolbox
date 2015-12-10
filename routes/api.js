@@ -87,7 +87,7 @@ var files = {
     "id": "toold10",
     "name": "De Bruijn Graph Assembly",
     "input": {
-      "0": "/home/bitnami/app/scripts/",
+      "0": "/home/bitnami/app/scripts/deBruijnGraphAssembler.py",
       "1": "/home/bitnami/app/data/debruijn_small.txt"
     }
   },
