@@ -141,6 +141,7 @@ var Tool1 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -150,7 +151,29 @@ var Tool1 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/dnaABoxes";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool2 = React.createClass({
@@ -171,6 +194,7 @@ var Tool2 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -180,7 +204,29 @@ var Tool2 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/translation";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool3 = React.createClass({
@@ -201,6 +247,7 @@ var Tool3 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -210,7 +257,29 @@ var Tool3 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/transcription";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool4 = React.createClass({
@@ -231,6 +300,7 @@ var Tool4 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -240,7 +310,29 @@ var Tool4 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/reverse";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool5 = React.createClass({
@@ -261,6 +353,7 @@ var Tool5 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -270,7 +363,29 @@ var Tool5 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/suffixTree";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool6 = React.createClass({
@@ -291,6 +406,7 @@ var Tool6 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -300,7 +416,29 @@ var Tool6 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/suffixArray";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool7 = React.createClass({
@@ -321,20 +459,23 @@ var Tool7 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
   },
   handleSubmit: function() {
+    event.preventDefault();
     if(this.state.input){
         console.log(this.state.input);
     }else{
       console.log("use default");
-      this.callapi();
+      this.callapi(this.props.reload);
     }
   },
   callapi:function(){
     console.log('calling to api');
+    // var url = "/api/useTool/bwt";
     var url = "/api/useTool/bwt";
     $.ajax({
       url: url,
@@ -345,11 +486,10 @@ var Tool7 = React.createClass({
       success: function(res) {
         console.log("it worked");
         console.log(res);
+        this.setState({result:res});
       }.bind(this),
       error: function(xhr, status, err) {
         // if there is an error, remove any login token
-        console.log(status);
-        console.log(err);
         console.log("didn't worked");
       }.bind(this)
     });
@@ -373,6 +513,7 @@ var Tool8 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -382,7 +523,29 @@ var Tool8 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/firstColumn";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool9 = React.createClass({
@@ -403,6 +566,7 @@ var Tool9 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -412,7 +576,29 @@ var Tool9 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/firstToLast";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool10 = React.createClass({
@@ -433,6 +619,7 @@ var Tool10 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -442,7 +629,29 @@ var Tool10 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/deBruijn";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 var Tool11 = React.createClass({
@@ -463,6 +672,7 @@ var Tool11 = React.createClass({
               <p onClick={this.handleSubmit}>or use default data</p>
               </div>
             </form>
+            <div className="resultcontainer">{this.state.result}</div>
             <Link to="home">Back to Toolbox</Link>
           </div>
         );
@@ -472,7 +682,29 @@ var Tool11 = React.createClass({
         console.log(this.state.input);
     }else{
       console.log("use default");
+      this.callapi(this.props.reload);
     }
+  },
+  callapi:function(){
+    console.log('calling to api');
+    // var url = "/api/useTool/bwt";
+    var url = "/api/useTool/mapping";
+    $.ajax({
+      url: url,
+      dataType: 'json',
+      type: 'GET',
+
+      // on success, store a login token
+      success: function(res) {
+        console.log("it worked");
+        console.log(res);
+        this.setState({result:res});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        // if there is an error, remove any login token
+        console.log("didn't worked");
+      }.bind(this)
+    });
   }
 });
 

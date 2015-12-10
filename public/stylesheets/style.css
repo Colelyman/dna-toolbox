@@ -89,6 +89,7 @@ body{
   background-color: #4CAF50;
   width:100%;
   /*color:white;*/
+  font-size: 14px;
   height: 50px;
   /*float:right;*/
 }
@@ -121,4 +122,9 @@ input{
     border-right-style: none;
     border-left-style: none;*/
 
+}
+.resultcontainer{
+  /*background-color: white;*/
+  text-align: center;
+  padding: 20px;
 }
