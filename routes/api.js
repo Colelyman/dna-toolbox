@@ -6,11 +6,8 @@ var toArray = function(data) {
 };
 
 var getFileArgs = function(obj, key) {
-  for(var k in obj) {
-    console.log(k);
-    if(obj.hasOwnProperty(key)) {
-      return obj[k];
-    }
+  if(obj.hasOwnProperty(key)) {
+    return obj[key];
   }
 };
 
@@ -29,7 +26,7 @@ var files = {
     "name": "Burrows Wheeler Transform",
     "input": {
       "0": "/home/bitnami/app/scripts/suffixTree.py",
-      "1": "/home/bitnami/app/data/text.txt",
+      "1": "/home/bitnami/app/data/test.txt",
       "2": "bwt"
     }
   }
@@ -39,16 +36,17 @@ router.get('/', function(req, res, next) {
   res.json('hi from api');
 });
 
-/*router.param('tool', function(req, res, next, toolName) {
-
-});*/
+router.param('tool', function(req, res, next, toolName) {
+  var fileArgs = getFileArgs(files, toolName);
+  req.params = toArray(fileArgs.input);
+  return next();
+});
 
 // Suffix Tree
-router.get('/suffixTree', function(req, res) {
-  var fileArgs = getFileArgs(files, 'suffixTree');
+router.get('/useTool/:tool', function(req, res) {
   var python = require('child_process').spawn(
     'python',
-    toArray(fileArgs.input)
+    req.params
   );
   var output = "";
   python.stderr.on('data', function(data) { console.log('From stderr: ' + data); })
