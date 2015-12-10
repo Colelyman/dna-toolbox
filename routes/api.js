@@ -1,15 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var util = require('util');
+var formidable = require('formidable');
+var fs = require('fs-extra');
 
-var toArray = function(data) {
-  return Object.keys(data).map(function(k) { return data[k]; });
-};
-
-var getFileArgs = function(obj, key) {
-  if(obj.hasOwnProperty(key)) {
-    return obj[key];
-  }
-};
 
 var files = {
   "dnaABoxes": {
@@ -115,12 +109,20 @@ router.get('/', function(req, res, next) {
 });
 
 router.param('tool', function(req, res, next, toolName) {
+  var toArray = function(data) {
+    return Object.keys(data).map(function(k) { return data[k]; });
+  };
+
+  var getFileArgs = function(obj, key) {
+    if(obj.hasOwnProperty(key)) {
+      return obj[key];
+    }
+  };
   var fileArgs = getFileArgs(files, toolName);
   req.params = toArray(fileArgs.input);
   return next();
 });
 
-// Suffix Tree
 router.get('/useTool/:tool', function(req, res) {
   var python = require('child_process').spawn(
     'python',
@@ -134,6 +136,43 @@ router.get('/useTool/:tool', function(req, res) {
     console.log('output is: ' + output);
     if ( code != 0){ return res.status(code).send("Error with code: " + code + ' and output: ' + output); }
     return res.status(code).json(output);
+  });
+});
+
+// File upload
+router.get('/upload', function(req, res, next) {
+  res.render('upload', { title: 'Upload your data', success: false});
+});
+
+router.post('/upload', function(req, res) {
+  var form = new formidable.IncomingForm();
+  form.parse(req, function(err, fields, files) {
+    res.render('upload', { title: 'Success', success: true});
+    //res.status(200).send(util.inspect({fields: fields, files: files}));
+  });
+  form.on('error', function(err) {
+    console.error(err);
+  });
+  form.on('progress', function(bytesReceived, bytesExpected) {
+    var percentage = (bytesReceived / bytesExpected) * 100;
+    console.log(percentage.toFixed(2));
+  });
+  form.on('end', function(fields, files) {
+    var tempPath = this.openedFiles[0].path;
+    var fileName = this.openedFiles[0].name;
+    var newLocation = '/home/bitnami/data/uploaded/';
+
+    fs.copy(tempPath, newLocation + fileName, function(err) {
+      if(err) {
+        console.error(err);
+      }
+      else {
+        console.log("Successfully copied file");
+        fs.unlink(tempPath, function() {
+          console.log("Successfully deleted tempFile");
+        });
+      }
+    });
   });
 });
 

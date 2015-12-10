@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  #content
+  if(!success)
+    form(action='/api/upload', enctype='multipart/form-data', method='post')
+      input(type='text', name='title')
+      br
+      input(type='file', name='upload')
+      br
+      input(type='submit', value='Upload')
+  else
+    h1 Successfully uploaded file!!
+    a(href='/' alt='Homepage')
+      h2 Take me home
