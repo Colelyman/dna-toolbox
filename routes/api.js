@@ -133,7 +133,7 @@ router.get('/useTool/:tool', function(req, res) {
   python.on('close', function(code) {
     console.log('output is: ' + output);
     if ( code != 0){ return res.status(code).send("Error with code: " + code + ' and output: ' + output); }
-    return res.status(code).send(output);
+    return res.status(code).json(output);
   });
 });
 

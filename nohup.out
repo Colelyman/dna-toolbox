@@ -1,0 +1,114 @@
+
+> start@0.0.0 start /home/bitnami/app
+> node ./bin/www
+
+output is: ATCCCAGCT TGATCCCAG GTGGATAAC GCTGGGATC TGTGGATAA CCAGGATCC GGATCCTGG None CTGGGATCA TTATCCACA AGCTGGGAT GATCCCAGC GTTATCCAC
+
+[0mGET /api/useTool/dnaABoxes [0m0 [0m1324.294 ms - 125[0m
+output is: ATCCCAGCT TGATCCCAG GTGGATAAC GCTGGGATC TGTGGATAA CCAGGATCC GGATCCTGG None CTGGGATCA TTATCCACA AGCTGGGAT GATCCCAGC GTTATCCAC
+
+[0mGET /api/useTool/dnaABoxes [0m0 [0m1287.831 ms - 125[0m
+[0mGET /robots.txt [33m404 [0m403.912 ms - 1632[0m
+[0mGET / [32m200 [0m36.604 ms - 853[0m
+[0mGET /api/useTool/sa [31m500 [0m59.204 ms - 1719[0m
+[0mGET /api/useTool/stylesheets/style.css [33m404 [0m28.446 ms - 1632[0m
+output is: ['C', 'G', 'A', 'A', 'T', 'A', '$', 'C', 'A', 'A', 'C', 'C', 'A', 'T', 'C', 'T', 'T', 'T', 'G', 'T', 'G', 'G', 'G', 'C', 'G']
+
+[0mGET /api/useTool/bwt [0m0 [0m95.609 ms - 126[0m
+[0mGET /api/useTool/st [31m500 [0m24.434 ms - 1719[0m
+[0mGET /api/useTool/stylesheets/style.css [33m404 [0m17.916 ms - 1632[0m
+output is: FHSVAGGVTLW
+
+[0mGET /api/useTool/translation [0m0 [0m93.136 ms - 12[0m
+output is: ['C', 'G', 'A', 'A', 'T', 'A', '$', 'C', 'A', 'A', 'C', 'C', 'A', 'T', 'C', 'T', 'T', 'T', 'G', 'T', 'G', 'G', 'G', 'C', 'G']
+
+[0mGET /api/useTool/bwt [0m0 [0m94.761 ms - 126[0m
+[0mGET /bitnami.css [33m404 [0m17.985 ms - 1632[0m
+[0mGET /xmlrpc.php [33m404 [0m18.212 ms - 1632[0m
+[0mGET /x [33m404 [0m16.464 ms - 1632[0m
+output is: A
+A
+A
+ACCCGGTTACC$
+CCCGGTTACC$
+CCCGGTTACC$
+C
+C
+CGGTTACC$
+$
+TGTGTGTGAAAACCCGGTTACC$
+C
+C
+CGGTTACC$
+$
+GGTTACC$
+TGTGTGTGAAAACCCGGTTACC$
+GGTTACC$
+$
+T
+ACC$
+TACC$
+G
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TGAAAACCCGGTTACC$
+G
+AAAACCCGGTTACC$
+T
+TACC$
+G
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TGAAAACCCGGTTACC$
+GTTACC$
+$
+None
+
+[0mGET /api/useTool/suffixTree [0m0 [0m97.452 ms - 326[0m
+output is: A
+A
+A
+ACCCGGTTACC$
+CCCGGTTACC$
+CCCGGTTACC$
+C
+C
+CGGTTACC$
+$
+TGTGTGTGAAAACCCGGTTACC$
+C
+C
+CGGTTACC$
+$
+GGTTACC$
+TGTGTGTGAAAACCCGGTTACC$
+GGTTACC$
+$
+T
+ACC$
+TACC$
+G
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TGAAAACCCGGTTACC$
+G
+AAAACCCGGTTACC$
+T
+TACC$
+G
+AAAACCCGGTTACC$
+TG
+AAAACCCGGTTACC$
+TGAAAACCCGGTTACC$
+GTTACC$
+$
+None
+
+[0mGET /api/useTool/suffixTree [0m0 [0m92.194 ms - 326[0m
