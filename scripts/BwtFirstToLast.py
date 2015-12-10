@@ -368,4 +368,6 @@ with open( sys.argv[ 1 ] ) as fh:
     seq = seq + "$"
 
 firstToLast = makeBwtFirstToLast( seq )
-print firstToLast
+#print firstToLast
+for i in firstToLast:
+    print i,

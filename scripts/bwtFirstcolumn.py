@@ -364,5 +364,6 @@ with open( sys.argv[ 1 ] ) as fh:
     seq = seq + "$"
 
 firstColumn = makeBwtFirstColumn( seq )
-print firstColumn
-
+#print firstColumn
+for i in firstColumn:
+    print i,
