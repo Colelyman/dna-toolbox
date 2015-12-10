@@ -45,67 +45,77 @@ var Home = React.createClass({
             <Link to="tool1" onClick={this.handleClick}>
               <div className="infobox">
                 <p className="infotitle">dnaA Boxes</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">Using this DnaA box tool, you can input one genome sequence and the output will be the likely origin of replication. This tool utilizes the many different methods of locating the minimum skew, finding frequent words with mismatches, finding the reverse compliment, and all occurrences of the DnaA box. Using these different algorithms provides you with a highly likely origin of replication within the input genome.
+</p>
               </div>
             </Link>
             <Link to="tool2">
               <div className="infobox">
                 <p className="infotitle">Translation</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">The Translation tool will take an input of a single RNA sequence and convert it into the corresponding amino acid sequence.
+</p>
               </div>
             </Link>
             <Link to="tool3">
               <div className="infobox">
                 <p className="infotitle">Transcription</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">The Transcription tool will take an input of a single sequence and convert it into the corresponding RNA sequence.
+</p>
               </div>
             </Link>
             <Link to="tool4">
               <div className="infobox">
                 <p className="infotitle">Reverse Transcription</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">This tool will convert the RNA single sequence into the corresponding DNA sequence as an ouput.</p>
               </div>
             </Link>
             <Link to="tool5">
               <div className="infobox">
                 <p className="infotitle">Suffix Tree</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">This tool will calculate the Suffix Tree from the inputted sequence.
+</p>
               </div>
             </Link>
             <Link to="tool6">
               <div className="infobox">
                 <p className="infotitle">Suffix Array</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">This tool uses the method in the Suffix Tree tool to condense the sequence from a tree into a Suffix Array. The input is the same as the Suffix Tree, simply a sequence.
+</p>
               </div>
             </Link>
             <Link to="tool7">
               <div className="infobox">
                 <p className="infotitle">Burrows Wheeler Transform</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">This Burrows Wheeler Transform tool will take a given sequence and transform the sequence into its corresponding compressed string using the BWT method.
+</p>
               </div>
             </Link>
             <Link to="tool8">
               <div className="infobox">
                 <p className="infotitle">BWT First Column</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">To use this tool, input a single DNA sequence and the first column of the Suffix Array will be outputted.
+</p>
               </div>
             </Link>
             <Link to="tool9">
               <div className="infobox">
                 <p className="infotitle">First To Last</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">To use this tool, you must input a single DNA sequence and the given result will be a First to Last string of the sequence.
+</p>
               </div>
             </Link>
             <Link to="tool10">
               <div className="infobox">
                 <p className="infotitle">DeBruijn Graph Assembly</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">This DeBruijn graph assembler with accept a fasta file with a list of reads as input and then output the longest contig after having constructed a DeBruijn graph from the reads provided. In order to account for errors within the sequence, the assembler will look closely at reads with an optimal kmer length and eliminate any kmers below the length used as a cutoff to mitigate any reads that might include errors.
+</p>
               </div>
             </Link>
             <Link to="tool11">
               <div className="infobox">
                 <p className="infotitle">Mapping</p>
-                <p className="infodescription">Lot of cool words here</p>
+                <p className="infodescription">The Mapping tool will take one or more read kmers in one file and the chromosome you want to compare against in another file both in fasta format. It will use a combination of a suffix array, first column, burrows wheeler, and last to first to generate the locations of the occurrences in the chromosome. It also breaks the kmer reads into smaller reads to handle errors in the reads.
+</p>
               </div>
             </Link>
           </div>
