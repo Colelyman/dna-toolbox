@@ -1,0 +1,124 @@
+/*
+1. dnaA boxes: (Cole)
+	 input: One genome sequence in fasta
+2. Translation: (Landon)
+	 input: single RNA sequence
+3. Transcription: (Landon)
+	 input: single sequence
+4. reverseTranscription: (Landon)
+
+5. suffix tree (Landon via Cole’s code)
+	 input: single sequence
+6. suffix array (Landon via Cole’s code)
+	 input: single sequence
+7. Burrows Wheeler Transform (Landon via Cole’s code)
+	 input: single dna sequence
+8. BWT First Column: (Landon via Cole’s code)
+	 input: single dna sequence
+9. FirstToLast: (Landon via Cole’s code)
+	 input: single dna sequence
+10. deBruijn graph assembly (nate)
+	  input: a list of reads, fasta
+11. Mapping (cole)
+	  input: one chromosome and a list of reads, fasta*/
+
+
+body{
+  /*background-color: red;*/
+  font-family: 'Carme', sans-serif;
+  margin: 0;
+  background-color: #E8E8E8;
+}
+.home{
+
+}
+.header{
+  text-align: center;
+}
+.headertitle{
+  font-size: 200%;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.headerwrapper{
+  border: solid white 5px;
+  background-color: white;
+}
+.welcome{
+  margin-left: 3%;
+}
+.boxcontainer{
+  text-align:center;
+}
+.infobox{
+  /*border: solid black 2px;*/
+  display:inline-block;
+  margin: 10px;
+  width:30%;
+  height:160px;
+  background-color: white;
+}
+.infotitle{
+  /*background-color: #43A047;*/
+  /*green - good*/
+  /*background-color: #795548;*/
+   /*brown - kinda good */
+  background-color: #607D8B;
+  /* blue grey - good*/
+  /*background-color: #F44336;  */
+  /*orange red - bad*/
+  /*background-color: #E53935; */
+  /*red - good*/
+  /*background-color: #42A5F5; */
+  /*light blue - good */
+  /*background-color: #1E88E5;*/
+  /*darker blue - bad*/
+  padding:15px;
+  margin:0;
+  color:white;
+}
+.infodescription{
+  text-align: left;
+  color:black;
+  margin:0;
+  padding:5px;
+}
+
+.button{
+  /*background-color: #F75D59;*/
+  background-color: #4CAF50;
+  width:100%;
+  /*color:white;*/
+  height: 50px;
+  /*float:right;*/
+}
+.buttoncontainer{
+  text-align: center;
+  float:right;
+  width:20%;
+  margin: 2%;
+  margin-left: 0;
+}
+textarea{
+  border:none;
+  margin:2%;
+  width:73%;
+  height: 77px;
+}
+
+input{
+  overflow: visible;
+    font-size: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 30%;
+    /*padding: 15px;*/
+    height: 150px;
+
+
+    /*border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;*/
+
+}
