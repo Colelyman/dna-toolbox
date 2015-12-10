@@ -52,10 +52,10 @@ body{
 }
 .infobox{
   /*border: solid black 2px;*/
-  display:inline-block;
+  display:inline-table;
   margin: 10px;
   width:30%;
-  height:160px;
+  height:269px;
   background-color: white;
 }
 .infotitle{
