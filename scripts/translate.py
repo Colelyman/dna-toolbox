@@ -3,6 +3,7 @@ import sys
 # RNA to Amino Acid Chain
 with open(sys.argv[1]) as fh:
     rna = fh.next().strip()
+    rna = rna.upper()
 
 map = {"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
     "UCU":"S", "UCC":"S", "UCA":"S", "UCG":"S",

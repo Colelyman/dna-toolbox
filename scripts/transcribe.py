@@ -6,6 +6,7 @@ def transcribe(dnaSeq):
 
 with open(sys.argv[1]) as fh:
 	dna = fh.next().strip()
+	dna = dna.upper()
 
 rna = transcribe(dna)
 print rna

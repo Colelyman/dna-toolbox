@@ -12,6 +12,38 @@ var getFileArgs = function(obj, key) {
 };
 
 var files = {
+  "dnaABoxes": {
+    "id": "tool1",
+    "name": "dnaA Boxes",
+    "input": {
+      "0": "/home/bitnami/app/scripts/dnaABoxes.py",
+      "1": "/home/bitnami/app/data/dnaabox_ecoli.fasta"
+    }
+  },
+  "translation": {
+    "id": "tool2",
+    "name": "Translation",
+    "input": {
+      "0": "/home/bitnami/app/scripts/translate.py",
+      "1": "/home/bitnami/app/data/translate.txt"
+    }
+  },
+  "transcription": {
+    "id": "tool3",
+    "name": "Transcription",
+    "input": {
+      "0": "/home/bitnami/app/scripts/transcribe.py",
+      "1": "/home/bitnami/app/data/test.txt"
+    }
+  },
+  "reverse": {
+    "id": "tool4",
+    "name": "Reverse",
+    "input": {
+      "0": "/home/bitnami/app/scripts/reverseTranscribe.py",
+      "1": "/home/bitnami/app/data/test.txt"
+    }
+  },
   "suffixTree": {
     "id": "tool5",
     "name": "Suffix Tree",
@@ -21,13 +53,59 @@ var files = {
       "2": "st"
     }
   },
-  "bwt": {
+  "suffixArray": {
     "id": "tool6",
+    "name": "Suffix Array",
+    "input": {
+      "0": "/home/bitnami/app/scripts/suffixTree.py",
+      "1": "/home/bitnami/app/data/test.txt",
+      "2": "sa"
+    }
+  },
+  "bwt": {
+    "id": "tool7",
     "name": "Burrows Wheeler Transform",
     "input": {
       "0": "/home/bitnami/app/scripts/suffixTree.py",
       "1": "/home/bitnami/app/data/test.txt",
       "2": "bwt"
+    }
+  },
+  "firstColumn": {
+    "id": "tool8",
+    "name": "First Column",
+    "input": {
+      "0": "/home/bitnami/app/scripts/suffixTree.py",
+      "1": "/home/bitnami/app/data/test.txt",
+      "2": "firstbwt"
+    }
+  },
+  "firstToLast": {
+    "id": "tool9",
+    "name": "First To Last",
+    "input": {
+      "0": "/home/bitnami/app/scripts/suffixTree.py",
+      "1": "/home/bitnami/app/data/test.txt",
+      "2": "ftl"
+    }
+  },
+  "deBruijn": {
+    "id": "toold10",
+    "name": "De Bruijn Graph Assembly",
+    "input": {
+      "0": "/home/bitnami/app/scripts/",
+      "1": "/home/bitnami/app/data/debruijn_small.txt"
+    }
+  },
+  "mapping": {
+    "id": "tool11",
+    "name": "Mapping",
+    "input": {
+      "0": "/home/bitnami/app/scripts/mapper.py",
+      "1": "/home/bitnami/app/scripts/mapping_genome.fasta",
+      "2": "/home/bitnami/app/scripts/mapping_reads.fasta",
+      "kmerLen": "8",
+      "mismatches": "3"
     }
   }
 };
